@@ -5,11 +5,7 @@ class Solution {
         for(int i=0; i<n; i++){
             char ch = address.charAt(i);
             if(ch != '.') finall.append(ch);
-            else{
-                finall.append('[');
-                finall.append('.');
-                finall.append(']');
-            }
+            else finall.append("[.]");
         }
         return finall.toString();
     }
