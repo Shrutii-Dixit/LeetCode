@@ -4,13 +4,11 @@ class Solution {
         int[] count = new int[26];
         int n = s.length();
         for(int i=0; i<n; i++){
-            char c1 = s.charAt(i);
-            char c2 = t.charAt(i);
-            count[c1 - 'a']++;
-            count[c2 - 'a']--;
+            count[s.charAt(i) - 'a']++;
+            count[t.charAt(i) - 'a']--;
         }
-        for(int i=0; i<26; i++){
-            if(count[i] != 0) return false;
+        for(int i : count){
+            if(i != 0) return false;
         }
         return true;
     }
