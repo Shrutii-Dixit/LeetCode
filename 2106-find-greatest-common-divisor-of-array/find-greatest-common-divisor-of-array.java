@@ -2,10 +2,14 @@ import java.util.Arrays;
 
 class Solution {
     public int findGCD(int[] nums) {
-        Arrays.sort(nums);
-        int x = nums[0];
-        int y = nums[nums.length - 1];
-        return gcd(x,y);
+        int min = nums[0];
+        int max = nums[0];
+
+        for (int num : nums) {
+            min = Math.min(min, num);
+            max = Math.max(max, num);
+        }
+        return gcd(min, max);
     }
 
     public int gcd(int a, int b){
