@@ -19,9 +19,9 @@ class Solution {
         while(prev.next != null && prev.next.next != null){
             ListNode first = prev.next;
             ListNode second = first.next;
-            ListNode nextPair = second.next;
+            ListNode nextNode = second.next;
 
-            first.next = nextPair;
+            first.next = nextNode;
             second.next = first;
             prev.next = second;
 
