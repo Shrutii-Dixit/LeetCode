@@ -5,7 +5,7 @@ class Solution {
         int i = 0;
         int sign = 1;
 
-        // Skip leading spaces
+        //skip space
         while (i < n && s.charAt(i) == ' ') {
             i++;
         }
