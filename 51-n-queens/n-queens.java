@@ -38,7 +38,6 @@ class Solution {
             left_di[left] = false;
             right_di[right] = false;
         }
-
     }
 
     public List<List<String>> solveNQueens(int n) {
