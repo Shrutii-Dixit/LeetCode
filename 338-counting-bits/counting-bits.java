@@ -3,14 +3,7 @@ class Solution {
       int[] arr = new int[n+1]; 
 
       for(int i=0; i<=n; i++){
-        int bits = 0;
-        int mask = 1;
-        
-        for(int j=0; j<32; j++){
-            if((mask & i) != 0) bits++;
-            mask <<= 1;
-        }
-        arr[i] = bits;
+        arr[i] = arr[i >> 1] + (i & 1);
       }
       return arr;
     }
